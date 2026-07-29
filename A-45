@@ -93,7 +93,7 @@ entity:SetCallback("OnStartMoving", function()
 	local A451 = Instance.new("Sound")
 	A451.SoundId = "rbxassetid://3526632933"
 	A451.Volume = 10
-	A451.PlaybackSpeed = 0.7
+	A451.PlaybackSpeed = 0.5
 	A451.Parent = workspace
 	A451:Play()
 	
