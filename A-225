@@ -29,10 +29,10 @@ local entity = Spawner:Create({
 	Movement = {
 		Speed = 175,
 		Delay = delayTime, -- Sửa thành số nguyên
-		Reversed = true
+		Reversed = false
 	},
 	Rebounding = {
-		Enabled = false,
+		Enabled = true,
 		Type = "Ambush",
 		Min = 3,
 		Max = 4,
