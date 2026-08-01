@@ -60,32 +60,6 @@ local entity = Spawner:Create({
 
 entity:SetCallback("OnSpawned", function()
 	print("Entity has spawned")
-	local A451 = Instance.new("Sound")
-	A451.SoundId = "rbxassetid://6351509719"
-	A451.Volume = 10
-	A451.PlaybackSpeed = 1
-	A451.Parent = workspace
-	A451:Play()
-	
-	local dis = Instance.new("DistortionSoundEffect")
-	dis.Level = 0.75
-	dis.Parent = A451
-	
-	local root = game.Workspace.A45.RushNew
-	local face = root.MonsterGui
-	local image = face.Image1
-	local pos_x = 0.1
-	local pos_y = 0.1
-	local pos_z = 0.1
-	local rot = 10
-
-
-	while true do
-		wait()
-		face.ExtentsOffsetWorldSpace = Vector3.new(Random.new():NextNumber(-pos_x,pos_x),Random.new():NextNumber(-pos_y,pos_y),Random.new():NextNumber(-pos_z,pos_z))
-		image.Rotation = math.random(-rot,rot)
-	end
-	
 end)
 
 entity:SetCallback("OnStartMoving", function()
@@ -118,11 +92,6 @@ end)
 
 entity:SetCallback("OnDespawning", function()
 	print("Entity is despawning")
-	local A45 = Instance.new("Sound")
-	A45.SoundId = "rbxassetid://6700552345"
-	A45.Volume = 10
-	A45.Parent = workspace
-	A45:Play()
 end)
 
 entity:SetCallback("OnDespawned", function()
