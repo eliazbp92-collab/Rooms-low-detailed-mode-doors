@@ -60,76 +60,6 @@ local entity = Spawner:Create({
 
 entity:SetCallback("OnSpawned", function()
 	print("Entity has spawned")
-	
-	local function GetGitSound(GithubSnd, SoundName)
-		local url = GithubSnd
-		if not isfile(SoundName .. ".mp3") then
-			writefile(SoundName .. ".mp3", game:HttpGet(url))
-		end
-		local sound = Instance.new("Sound")
-		sound.SoundId = (getcustomasset or getsynasset)(SoundName .. ".mp3")
-		return sound
-	end
-	local Ambience = GetGitSound("https://github.com/reboundplayz/Doors-Fixed-Modes/raw/refs/heads/main/A100Ambience.mp3.mpeg","Toilet.com")
-	Ambience.Parent = workspace["A-100"].HumanoidRootPart
-	Ambience.Volume = 4
-	Ambience.Looped = true
-	Ambience.PlaybackSpeed = 1
-	Ambience.RollOffMinDistance = 100
-	Ambience.RollOffMaxDistance = 200
-	Ambience:Play()
-	
-	
-	task.spawn(function()
-		local A1 = workspace["A-100"].HumanoidRootPart.A1.ImageLabel
-		local random = Random.new(1, 6)
-
-		while task.wait(0.3) do
-			if random == 1 then
-				A1.Image = "rbxassetid://11131703032"
-			elseif random == 2 then
-				A1.Image = "rbxassetid://1972219024"
-			elseif random == 3 then
-				A1.Image = "rbxassetid://1822114127"
-			elseif random == 4 then
-				A1.Image = "rbxassetid://13445926051"
-			elseif random == 5 then
-				A1.Image = "rbxassetid://3413871766"
-			elseif random == 6 then
-				A1.Image = "rbxassetid://11131699495"
-			end
-		end
-	end)
-	task.spawn(function()
-		local A2 = workspace["A-100"].HumanoidRootPart.A2.ImageLabel
-		local random = Random.new(1, 6)
-
-		while task.wait(0.3) do
-			if random == 1 then
-				A2.Image = "rbxassetid://11131703032"
-			elseif random == 2 then
-				A2.Image = "rbxassetid://1972219024"
-			elseif random == 3 then
-				A2.Image = "rbxassetid://1822114127"
-			elseif random == 4 then
-				A2.Image = "rbxassetid://13445926051"
-			elseif random == 5 then
-				A2.Image = "rbxassetid://3413871766"
-			elseif random == 6 then
-				A2.Image = "rbxassetid://11131699495"
-			end
-		end
-	end)
-	task.spawn(function()
-		local A1 = workspace["A-100"].HumanoidRootPart.A1
-		local A2 = workspace["A-100"].HumanoidRootPart.A2
-
-		while task.wait(0.05) do
-			A1.ExtentsOffsetWorldSpace = Vector3.new(Random.new():NextNumber(-1.5, 1.5), Random.new():NextNumber(-1.5, 1.5), Random.new():NextNumber(-1.5, 1.5))
-			A2.ExtentsOffsetWorldSpace = Vector3.new(Random.new():NextNumber(-1.5, 1.5), Random.new():NextNumber(-1.5, 1.5), Random.new():NextNumber(-1.5, 1.5))
-		end
-
-	end)
 end)
 
 entity:SetCallback("OnStartMoving", function()
@@ -202,11 +132,11 @@ local function Jumpscare()
 	)
 	
 	local chanceid = {
-		"15522973240",
-		"15522982889",
-		"15522989983",
-		"15522996948",
-		"15523007184"
+		"8960526619",
+		"6196108971",
+		"6734172334",
+		"7057923071",
+		"4817426006"
 	}
 
 	task.spawn(function()
