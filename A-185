@@ -6,8 +6,8 @@ local Spawner = loadstring(game:HttpGet("https://raw.githubusercontent.com/Regul
 
 local entity = Spawner:Create({
 	Entity = {
-		Name = "A-105",
-		Asset = "rbxassetid://16403472490",
+		Name = "A-185",
+		Asset = "rbxassetid://16985096259",
 		HeightOffset = 0
 	},
 	Lights = {
@@ -51,7 +51,7 @@ local entity = Spawner:Create({
 	},
 	Death = {
 		Type = "Guiding", -- "Curious"
-		Hints = {"You die to A-105", "He is actually fast when u hear a sound like a train", "Is him don't hide in closet because he can check it", "Go hide in bed"},
+		Hints = {"You die to A-185", "He is actually fast when u hear a sound like a Amtrak train", "Is him don't hide in closet because he can check it", "Go hide in bed"},
 		Cause = ""
 	}
 })
