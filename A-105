@@ -130,61 +130,6 @@ entity:SetCallback("OnEnterRoom", function(room: Model, firstTime: boolean)
 
 	else
 		print("Entity has entered room: ".. room.Name.. " again")
-		local entity5 = entity.Model
-		if not entity5 or not firstTime then return end
-
-		task.spawn(function()
-			task.wait(0.1)
-			local wardrobes = {}
-
-			for _, v in ipairs(room:GetDescendants()) do
-				if v:IsA("Model") then
-					local n = string.lower(v.Name)
-					if n:find("wardrobe") or n:find("closet") then
-						table.insert(wardrobes, v)
-					end
-				end
-			end
-
-			table.sort(wardrobes, function(a, b)
-				return a:GetPivot().Position.X < b:GetPivot().Position.X
-			end)
-
-			local player = game.Players.LocalPlayer
-			local char = player.Character
-
-			for _, wardrobe in ipairs(wardrobes) do
-				entity:Pause()
-				entity5:PivotTo(wardrobe:GetPivot() * CFrame.new(0, 0, -7))
-				task.wait(0.35)
-
-				local function isPlayerInsideWardrobe()
-					if not char or not char:FindFirstChild("HumanoidRootPart") then return false end
-					local boxPos = wardrobe:GetPivot().Position
-					return (char.HumanoidRootPart.Position - boxPos).Magnitude < 6
-				end
-
-				local wasHiding = isPlayerInsideWardrobe()
-				task.wait(1.5)
-
-				-- Destroy Doors + Prompts
-				for _, v in ipairs(wardrobe:GetDescendants()) do
-					if v:IsA("ProximityPrompt") or v.Name == "HidePrompt" then v:Destroy()
-					end
-				end
-
-				-- KILL + JUMPSCARE
-				if isPlayerInsideWardrobe() or wasHiding then
-					if char then
-						task.spawn(Jumpscare) 
-						task.wait(0.1)
-						local hum = char:FindFirstChildOfClass("Humanoid")
-						if hum then hum.Health = 0 end
-					end
-				end
-
-				entity:Resume()
-				task.wait(0.2)
 			end
 		end)
 
