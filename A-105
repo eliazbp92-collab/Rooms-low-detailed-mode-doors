@@ -127,6 +127,7 @@ entity:SetCallback("OnEnterRoom", function(room: Model, firstTime: boolean)
 				task.wait(0.2)
 			end
 		end)
+
 	else
 		print("Entity has entered room: ".. room.Name.. " again")
 		local entity5 = entity.Model
