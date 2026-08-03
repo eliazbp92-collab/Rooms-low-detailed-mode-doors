@@ -14,11 +14,11 @@ if initiator then
     if mainGame and mainGame:IsA("ModuleScript") then
         local mainGameModule = require(mainGame)
         if type(mainGameModule.caption) == "function" then
-            mainGameModule.caption("Hardcore Mode Recreation By ItzzGabbbb", true)
+            mainGameModule.caption("Rooms low detailed mode made by Rebound/Rush scripter", true)
             wait(4)
-            mainGameModule.caption("Credits to Noonie & Ping for the original hardcore mode", true)
+            mainGameModule.caption("Rooms low detailed is privated", true)
             wait(3)
-            mainGameModule.caption("*tickles your balls* :3", true)
+            mainGameModule.caption("You will have fun (you won't)", true)
         end
     end
 end
